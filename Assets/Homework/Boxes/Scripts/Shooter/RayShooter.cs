@@ -20,12 +20,4 @@ public class RayShooter : IShooter
             _shooterEffect.Execute(hitInfo.point);
         }
     }
-
-    public void StopShoot(Vector3 origin, Vector3 direction)
-    {
-        Ray ray = new Ray(origin, direction);
-
-        if (Physics.Raycast(ray, out RaycastHit hitInfo, MaxRayDistance))
-            _shooterEffect.StopExecute();
-    }
 }
