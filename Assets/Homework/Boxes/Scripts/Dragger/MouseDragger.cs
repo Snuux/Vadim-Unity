@@ -73,7 +73,9 @@ public class MouseDragger : IDragger
         if (!Physics.Raycast(ScreenPointToRay(), out RaycastHit hit, DefaultRayDistance))
             return null;
 
-        hit.collider.TryGetComponent<IDraggable>(out IDraggable draggable);
+        if (!hit.collider.TryGetComponent<IDraggable>(out IDraggable draggable))
+            return null;
+
         return draggable;
     }
 

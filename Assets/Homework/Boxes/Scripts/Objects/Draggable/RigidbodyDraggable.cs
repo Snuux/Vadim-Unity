@@ -15,17 +15,18 @@ public class RigidbodyDraggable : MonoBehaviour, IDraggable
 
     public void OnGrab()
     {
+        _rigidbody.isKinematic = true;
     }
 
     public void OnDrag(Vector3 targetPosition)
     {
-        _rigidbody.isKinematic = true;
         _rigidbody.position = targetPosition;
-        _rigidbody.isKinematic = false;
     }
 
     public void OnRelease()
     {
+        _rigidbody.isKinematic = false;
+
         _rigidbody.AddTorque(Vector3.forward * Random.Range(MinTorque, MaxTorque), ForceMode.Impulse);
         _rigidbody.AddTorque(Vector3.right * Random.Range(MinTorque, MaxTorque), ForceMode.Impulse);
     }

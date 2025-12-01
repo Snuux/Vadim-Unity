@@ -100,3 +100,4 @@ InitTestScene*.unity*
 /Assets/Art/ThirdParty
 /Packages/com.singularitygroup.hotreload
 /Assets/Plugins
+Packages/packages-lock.json
