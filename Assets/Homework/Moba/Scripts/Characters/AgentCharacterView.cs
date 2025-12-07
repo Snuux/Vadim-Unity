@@ -16,11 +16,6 @@ public class AgentCharacterView : MonoBehaviour
 
     private float _previusUpdateCycleHealth;
 
-    private void Awake()
-    {
-        _previusUpdateCycleHealth = _character.CurrentHealth;
-    }
-
     private void Update()
     {
         if (_character.CurrentVelocity.magnitude > MinimumVelocitySpeed)
