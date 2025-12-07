@@ -1,16 +1,20 @@
-﻿using UnityEngine;
+﻿using Boxes;
+using UnityEngine;
 
-public class ParticleSystemSpawner : MonoBehaviour, ISpawner
+namespace Boxes
 {
-    [SerializeField] ParticleSystem _particleSystemPrefab;
-
-    public void Initialize(ParticleSystem particleSystemPrefab)
+    public class ParticleSystemSpawner : MonoBehaviour, ISpawner
     {
-        _particleSystemPrefab = particleSystemPrefab;
-    }
+        [SerializeField] ParticleSystem _particleSystemPrefab;
 
-    public void Spawn(Vector3 position)
-    {
-        Instantiate(_particleSystemPrefab, position, Quaternion.identity);
+        public void Initialize(ParticleSystem particleSystemPrefab)
+        {
+            _particleSystemPrefab = particleSystemPrefab;
+        }
+
+        public void Spawn(Vector3 position)
+        {
+            Instantiate(_particleSystemPrefab, position, Quaternion.identity);
+        }
     }
 }

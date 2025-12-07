@@ -81,10 +81,8 @@ public class MouseDragger : IDragger
 
     private Ray ScreenPointToRay() => Camera.main.ScreenPointToRay(Input.mousePosition);
 
-    private Vector3 MouseWorldPosition()
-    {
-        return Camera.main.ScreenToWorldPoint(
-                    new Vector3(Input.mousePosition.x, Input.mousePosition.y, DefaultRayDistance)
-                );
-    }
+    private Vector3 MouseWorldPosition() 
+        => Camera.main.ScreenToWorldPoint(
+            new Vector3(Input.mousePosition.x, Input.mousePosition.y, DefaultRayDistance)
+        );
 }

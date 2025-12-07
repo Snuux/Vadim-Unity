@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 
-public interface ISpawner
+namespace Boxes
 {
-    void Spawn(Vector3 position);
+    public interface ISpawner
+    {
+        void Spawn(Vector3 position);
+    }
 }

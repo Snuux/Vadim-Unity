@@ -1,33 +1,36 @@
 using UnityEngine;
 
-public class ExplodableShootEffect : IShootEffect
+namespace Boxes
 {
-    private float _force;
-    private float _radius;
-
-    private ParticleSystemSpawner _fxSpawner;
-
-    public ExplodableShootEffect(float force, float radius, ParticleSystemSpawner fxSpawnerPrefab)
+    public class ExplodableShootEffect : IShootEffect
     {
-        _force = force;
-        _radius = radius;
+        private float _force;
+        private float _radius;
 
-        _fxSpawner = fxSpawnerPrefab;
-    }
+        private ParticleSystemSpawner _fxSpawner;
 
-    public void Execute(Vector3 point)
-    {
-        Collider[] targets = Physics.OverlapSphere(point, _radius);
-
-        foreach (Collider target in targets)
+        public ExplodableShootEffect(float force, float radius, ParticleSystemSpawner fxSpawnerPrefab)
         {
-            if (target.TryGetComponent(out IExplodable explodable))
-            {
-                Vector3 direction = (target.transform.position - point).normalized;
-                explodable.Explode(point, direction * _force);
-            }
+            _force = force;
+            _radius = radius;
+
+            _fxSpawner = fxSpawnerPrefab;
         }
 
-        _fxSpawner.Spawn(point);
+        public void Execute(Vector3 point)
+        {
+            Collider[] targets = Physics.OverlapSphere(point, _radius);
+
+            foreach (Collider target in targets)
+            {
+                if (target.TryGetComponent(out IExplodable explodable))
+                {
+                    Vector3 direction = (target.transform.position - point).normalized;
+                    explodable.Explode(point, direction * _force);
+                }
+            }
+
+            _fxSpawner.Spawn(point);
+        }
     }
 }

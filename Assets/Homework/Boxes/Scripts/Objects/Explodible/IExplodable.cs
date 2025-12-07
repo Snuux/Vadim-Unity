@@ -1,6 +1,9 @@
 using UnityEngine;
 
-public interface IExplodable
+namespace Boxes
 {
-    void Explode(Vector3 point, Vector3 force);
+    public interface IExplodable
+    {
+        void Explode(Vector3 point, Vector3 force);
+    }
 }
