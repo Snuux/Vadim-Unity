@@ -46,25 +46,14 @@ class Manager : MonoBehaviour
             return;
         }
 
-        if (_agentCharacter.IsLongIdle() && IsRandomPointNearPlayer())
+        if (_agentCharacter.IsLongIdle() && _agentCharacter.HasPath() == false)
         {
             _playerAgentRandomPointsController.Enable();
-            _playerAgentController.Disable();
         }
         else
         {
             _playerAgentRandomPointsController.Disable();
             _playerAgentController.Enable();
         }
-
-    }
-
-    bool IsRandomPointNearPlayer()
-    {
-        foreach (var point in _randomPoints)
-            if ((point.Position - _agentCharacter.Position).magnitude <= point.Radius)
-                return true;
-
-        return false;
     }
 }

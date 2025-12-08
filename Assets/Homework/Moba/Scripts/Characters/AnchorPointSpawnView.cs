@@ -26,7 +26,7 @@ public class AnchorPointSpawnView : MonoBehaviour
 
     private void SpawnAnchorPoint()
     {
-        if (_isChangedDestination)
+        if (_isChangedDestination && Input.GetMouseButton(0))
             _anchorPointPrefab.Spawn(_character.CurrentDestination + AnchorPointParticleSystemOffsetY * Vector3.up);
     }
 
