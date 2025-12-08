@@ -9,41 +9,62 @@ class Manager : MonoBehaviour
 
     [SerializeField] List<MovePointCharacter> _randomPoints;
 
-    private Controller _playerAgentMoveableController;
-    private Controller _playerRotationController;
-    private Controller _playerRandomPointsMovableController;
+    private Controller _playerAgentController;
+    private Controller _playerAgentRandomPointsController;
 
     private void Awake()
     {
-        _playerAgentMoveableController = new AgentMouseMovableController(_agentCharacter);
-        _playerAgentMoveableController.Enable();
+        _playerAgentController = new CompositeController(
+            new AgentMouseMovableController(_agentCharacter),
+            new AgentRotatableController(_agentCharacter, _agentCharacter)
+            );
 
-        _playerRotationController = new AgentRotatableController(_agentCharacter, _agentCharacter);
-        _playerRotationController.Enable();
+        _playerAgentRandomPointsController = new CompositeController(
+            new AgentRandomPointsMovableController(_agentCharacter, _randomPoints),
+            new AgentRotatableController(_agentCharacter, _agentCharacter)
+            );
 
-        _playerRandomPointsMovableController = new AgentRandomPointsMovableController(
-            _agentCharacter, _randomPoints);
-
-        _playerRandomPointsMovableController.Enable();
+        _playerAgentController.Enable();
+        _playerAgentRandomPointsController.Disable();
     }
 
     private void Update()
     {
+        SwitchControllersIfAgentDeadOrLongIdle();
+
+        _playerAgentController.Update(Time.deltaTime);
+        _playerAgentRandomPointsController.Update(Time.deltaTime);
+    }
+
+    private void SwitchControllersIfAgentDeadOrLongIdle()
+    {
         if (_agentCharacter.IsDead())
         {
-            _playerAgentMoveableController.Disable();
-            _playerRotationController.Disable();
-            _playerRandomPointsMovableController.Disable();
+            _playerAgentController.Disable();
+            _playerAgentRandomPointsController.Disable();
+
+            return;
+        }
+
+        if (_agentCharacter.IsLongIdle() && IsRandomPointNearPlayer())
+        {
+            _playerAgentRandomPointsController.Enable();
+            _playerAgentController.Disable();
         }
         else
         {
-            _playerAgentMoveableController.Enable();
-            _playerRotationController.Enable();
-            _playerRandomPointsMovableController.Enable();
+            _playerAgentRandomPointsController.Disable();
+            _playerAgentController.Enable();
         }
 
-        _playerAgentMoveableController.Update(Time.deltaTime);
-        _playerRotationController.Update(Time.deltaTime);
-        _playerRandomPointsMovableController.Update(Time.deltaTime);
+    }
+
+    bool IsRandomPointNearPlayer()
+    {
+        foreach (var point in _randomPoints)
+            if ((point.Position - _agentCharacter.Position).magnitude <= point.Radius)
+                return true;
+
+        return false;
     }
 }

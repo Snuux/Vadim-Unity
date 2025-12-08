@@ -50,8 +50,6 @@ public class AgentMouseMovableController : Controller
 
         if (_isValidPath)
         {
-            _agent.SpawnAnchorPoint(_destinationPosition);
-
             if (_destinationPosition.magnitude > Treshhold)
                 _agent.SetDestination(_destinationPosition);
         }

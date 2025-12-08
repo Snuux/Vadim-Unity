@@ -21,13 +21,10 @@ public class AgentRandomPointsMovableController : Controller
 
     public override void UpdateControlling(float deltaTime)
     {
-        if (_agent.HasPath == false && _agent.IsLongIdle == true)
-        {
-            MovePointCharacter pointCharacter = GetRandomPoint();
+        MovePointCharacter pointCharacter = GetRandomPoint();
 
-            if (pointCharacter != null)
-                _agent.SetDestination(pointCharacter.Position);
-        }
+        if (pointCharacter != null)
+            _agent.SetDestination(pointCharacter.Position);
     }
 
     private MovePointCharacter GetRandomPoint()
@@ -42,7 +39,7 @@ public class AgentRandomPointsMovableController : Controller
                 availiblePoints.Add(point);
         }
 
-        if (availiblePoints.Count == 0) 
+        if (availiblePoints.Count == 0)
             return null;
 
         return availiblePoints[Random.Range(0, availiblePoints.Count)];

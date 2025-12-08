@@ -11,8 +11,12 @@ public class AgentCharacterView : MonoBehaviour
     private const int InjuredLayerWeight = 1;
     private const int InjuredLayerWeightZero = 0;
 
+    private const float DiePointParticleSystemOffsetY = .5f;
+
     [SerializeField] Animator _animator;
     [SerializeField] AgentCharacter _character;
+
+    [SerializeField] private Spawner _diePointPrefab;
 
     private float _previusUpdateCycleHealth;
 
@@ -35,6 +39,9 @@ public class AgentCharacterView : MonoBehaviour
 
         if (IsDamageRecieved())
             RecieveDamageTrigger();
+
+        if (_character.IsDeadTrigger)
+            _diePointPrefab.Spawn(transform.position + DiePointParticleSystemOffsetY * Vector3.up);
     }
 
     private void StartRunning() => _animator.SetBool(IsRunningKey, true);
@@ -58,5 +65,4 @@ public class AgentCharacterView : MonoBehaviour
         _previusUpdateCycleHealth = _character.CurrentHealth;
         return isDamageRecieved;
     }
-
 }

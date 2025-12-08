@@ -45,6 +45,8 @@ GameObject:
   - component: {fileID: 6839967640491599604}
   - component: {fileID: 4188340014078857879}
   - component: {fileID: 3075416487089850660}
+  - component: {fileID: 2443852538188329817}
+  - component: {fileID: 6415103642102430882}
   m_Layer: 0
   m_Name: CharacterAgent
   m_TagString: Untagged
@@ -156,13 +158,9 @@ MonoBehaviour:
   _rotationSpeed: 900
   _moveSpeed: 10
   _maxHealth: 100
-  _requiredTimeToLongIdle: 1.5
-  _anchorPointParticleSystemPrefab: {fileID: 198963915963589588, guid: 550253432af01f242b4f1c7ed4e3fd41,
-    type: 3}
-  _anchorPointParticleSystemOffsetY: 0.5
-  _diePointParticleSystemPrefab: {fileID: 198355779183106702, guid: 0e9cea9117a6d0d499abd4a618630426,
-    type: 3}
-  _diePointParticleSystemOffsetY: 0.5
+  _requiredTimeToLongIdle: 0.5
+  _anchorPointPrefab: {fileID: 2443852538188329817}
+  _diePointPrefab: {fileID: 6415103642102430882}
 --- !u!114 &3075416487089850660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,6 +175,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 7285813506517023883}
   _character: {fileID: 4188340014078857879}
+--- !u!114 &2443852538188329817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8618466158583620118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3922df572cc226b4cb9f4a1fc03335e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _particleSystemPrefab: {fileID: 198963915963589588, guid: 550253432af01f242b4f1c7ed4e3fd41,
+    type: 3}
+--- !u!114 &6415103642102430882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8618466158583620118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3922df572cc226b4cb9f4a1fc03335e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _particleSystemPrefab: {fileID: 198355779183106702, guid: 0e9cea9117a6d0d499abd4a618630426,
+    type: 3}
 --- !u!1001 &8719922984546688736
 PrefabInstance:
   m_ObjectHideFlags: 0

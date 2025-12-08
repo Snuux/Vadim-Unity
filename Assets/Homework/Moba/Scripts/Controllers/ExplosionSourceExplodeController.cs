@@ -1,25 +1,26 @@
+using Boxes;
 using UnityEngine;
 
-class ExplosionController : Controller
+class ExplosionSourceExplodeController : Controller
 {
     private IExplosionSource _explosionSource;
 
-    private float _activateRadius;
+    private float _radius;
     private float _secondsToExplode;
 
     private float _secondsBeforeExplode;
     private bool _startExplodeTimer;
 
-    public ExplosionController(IExplosionSource explosionSource, float activateRadius, float secondsToExplode)
+    public ExplosionSourceExplodeController(IExplosionSource explosionSource, float radius, float secondsToExplode)
     {
         _explosionSource = explosionSource;
-        _activateRadius = activateRadius;
+        _radius = radius;
         _secondsToExplode = secondsToExplode;
     }
 
     public override void UpdateControlling(float deltaTime)
     {
-        if (IsExplodableInsideRadius(_explosionSource.Position, _activateRadius))
+        if (IsExplodableInsideRadius(_explosionSource.Position, _radius))
             _startExplodeTimer = true;
 
         if (_startExplodeTimer)
@@ -30,7 +31,7 @@ class ExplosionController : Controller
             _startExplodeTimer = false;
             _secondsBeforeExplode = 0;
 
-            _explosionSource.Explode(_explosionSource.Position);
+            _explosionSource.Explode();
         }
     }
 
@@ -41,7 +42,7 @@ class ExplosionController : Controller
         Collider[] targets = Physics.OverlapSphere(position, activateRadius);
 
         foreach (Collider target in targets)
-            if (target.TryGetComponent(out IDamageExplodable explodable))
+            if (target.TryGetComponent(out IExplodable explodable))
                 insideRadius = true;
 
         return insideRadius;

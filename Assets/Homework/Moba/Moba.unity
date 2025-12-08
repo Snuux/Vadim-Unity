@@ -824,9 +824,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
+      propertyPath: _radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
       propertyPath: _activateRadius
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
+      propertyPath: _explosionPrefab
+      value: 
+      objectReference: {fileID: 2136625203}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _explosionRadius
@@ -1456,7 +1466,7 @@ GameObject:
   - component: {fileID: 196340967}
   - component: {fileID: 196340966}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: CanvasUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1704,9 +1714,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
+      propertyPath: _radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
       propertyPath: _activateRadius
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
+      propertyPath: _explosionPrefab
+      value: 
+      objectReference: {fileID: 2136625203}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _explosionRadius
@@ -1715,7 +1735,7 @@ PrefabInstance:
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _secondsToExplode
-      value: 0.3
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3423433810621866417, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
@@ -2724,9 +2744,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
+      propertyPath: _radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
       propertyPath: _activateRadius
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
+      propertyPath: _explosionPrefab
+      value: 
+      objectReference: {fileID: 2136625203}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _explosionRadius
@@ -2735,7 +2765,7 @@ PrefabInstance:
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _secondsToExplode
-      value: 0.3
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3423433810621866417, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
@@ -5178,9 +5208,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
+      propertyPath: _radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
       propertyPath: _activateRadius
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
+      propertyPath: _explosionPrefab
+      value: 
+      objectReference: {fileID: 2136625203}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _explosionRadius
@@ -5189,7 +5229,7 @@ PrefabInstance:
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _secondsToExplode
-      value: 0.3
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3423433810621866417, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
@@ -5829,9 +5869,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
+      propertyPath: _radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
       propertyPath: _activateRadius
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
+      propertyPath: _explosionPrefab
+      value: 
+      objectReference: {fileID: 2136625203}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _explosionRadius
@@ -5840,7 +5890,7 @@ PrefabInstance:
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _secondsToExplode
-      value: 0.3
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3423433810621866417, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
@@ -6040,9 +6090,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
+      propertyPath: _radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
       propertyPath: _activateRadius
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
+      propertyPath: _explosionPrefab
+      value: 
+      objectReference: {fileID: 2136625203}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _explosionRadius
@@ -6051,7 +6111,7 @@ PrefabInstance:
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _secondsToExplode
-      value: 0.3
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3423433810621866417, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
@@ -6133,9 +6193,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
+      propertyPath: _radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
       propertyPath: _activateRadius
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
+      propertyPath: _explosionPrefab
+      value: 
+      objectReference: {fileID: 2136625203}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _explosionRadius
@@ -6700,9 +6770,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
+      propertyPath: _radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
       propertyPath: _activateRadius
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
+      propertyPath: _explosionPrefab
+      value: 
+      objectReference: {fileID: 2136625203}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _explosionRadius
@@ -6711,7 +6791,7 @@ PrefabInstance:
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _secondsToExplode
-      value: 1
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3423433810621866417, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
@@ -8062,9 +8142,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
+      propertyPath: _radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
       propertyPath: _activateRadius
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
+      propertyPath: _explosionPrefab
+      value: 
+      objectReference: {fileID: 2136625203}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _explosionRadius
@@ -8073,7 +8163,7 @@ PrefabInstance:
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _secondsToExplode
-      value: 0.3
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3423433810621866417, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
@@ -8636,9 +8726,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
+      propertyPath: _radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
       propertyPath: _activateRadius
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
+      propertyPath: _explosionPrefab
+      value: 
+      objectReference: {fileID: 2136625203}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _explosionRadius
@@ -8647,7 +8747,7 @@ PrefabInstance:
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _secondsToExplode
-      value: 1
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3423433810621866417, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
@@ -8922,9 +9022,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
+      propertyPath: _radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
       propertyPath: _activateRadius
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
+      propertyPath: _explosionPrefab
+      value: 
+      objectReference: {fileID: 2136625203}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _explosionRadius
@@ -8933,7 +9043,7 @@ PrefabInstance:
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _secondsToExplode
-      value: 0.3
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3423433810621866417, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
@@ -9939,7 +10049,19 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1774405187}
         m_TargetAssemblyTypeName: AgentCharacter, Assembly-CSharp
-        m_MethodName: ReviveAndTeleportToDefaultPosition
+        m_MethodName: TeleportToDefaultPosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1774405187}
+        m_TargetAssemblyTypeName: AgentCharacter, Assembly-CSharp
+        m_MethodName: Revive
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10243,9 +10365,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
+      propertyPath: _radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
       propertyPath: _activateRadius
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
+      propertyPath: _explosionPrefab
+      value: 
+      objectReference: {fileID: 2136625203}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _explosionRadius
@@ -10254,7 +10386,7 @@ PrefabInstance:
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _secondsToExplode
-      value: 0.3
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3423433810621866417, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
@@ -10866,9 +10998,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
+      propertyPath: _radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
       propertyPath: _activateRadius
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
+      propertyPath: _explosionPrefab
+      value: 
+      objectReference: {fileID: 2136625203}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _explosionRadius
@@ -10877,7 +11019,7 @@ PrefabInstance:
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _secondsToExplode
-      value: 0.3
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3423433810621866417, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
@@ -11061,6 +11203,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60827353f11ffd946bf4346e39cd57f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1569877488 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8618466158583620118, guid: f55f45a6debd6224284ac61e7b14974a,
+    type: 3}
+  m_PrefabInstance: {fileID: 3298134861097357696}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1582006821
 GameObject:
   m_ObjectHideFlags: 0
@@ -11403,9 +11551,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
+      propertyPath: _radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
       propertyPath: _activateRadius
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
+      propertyPath: _explosionPrefab
+      value: 
+      objectReference: {fileID: 2136625203}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _explosionRadius
@@ -11414,7 +11572,7 @@ PrefabInstance:
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _secondsToExplode
-      value: 0.3
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3423433810621866417, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
@@ -11727,9 +11885,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
+      propertyPath: _radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
       propertyPath: _activateRadius
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
+      propertyPath: _explosionPrefab
+      value: 
+      objectReference: {fileID: 2136625203}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _explosionRadius
@@ -12120,9 +12288,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
+      propertyPath: _radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
       propertyPath: _activateRadius
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
+      propertyPath: _explosionPrefab
+      value: 
+      objectReference: {fileID: 2136625203}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _explosionRadius
@@ -12131,7 +12309,7 @@ PrefabInstance:
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _secondsToExplode
-      value: 0.3
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3423433810621866417, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
@@ -12572,12 +12750,50 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 3298134861097357696}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1569877488}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db79970c858238f4b85c055751f86920, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1774405188 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2443852538188329817, guid: f55f45a6debd6224284ac61e7b14974a,
+    type: 3}
+  m_PrefabInstance: {fileID: 3298134861097357696}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569877488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3922df572cc226b4cb9f4a1fc03335e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1774405189 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6415103642102430882, guid: f55f45a6debd6224284ac61e7b14974a,
+    type: 3}
+  m_PrefabInstance: {fileID: 3298134861097357696}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569877488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3922df572cc226b4cb9f4a1fc03335e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1774405194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569877488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b64a8113d37c16d4a8446192a72ee0f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _character: {fileID: 1774405187}
+  _anchorPointPrefab: {fileID: 1774405188}
 --- !u!4 &1797027385 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2832110682397899803, guid: ba1137c71e9a3f84a9db072f2715ae11,
@@ -12741,9 +12957,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
+      propertyPath: _radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
       propertyPath: _activateRadius
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
+      propertyPath: _explosionPrefab
+      value: 
+      objectReference: {fileID: 2136625203}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _explosionRadius
@@ -12752,7 +12978,7 @@ PrefabInstance:
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _secondsToExplode
-      value: 0.3
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3423433810621866417, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
@@ -13066,9 +13292,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
+      propertyPath: _radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
       propertyPath: _activateRadius
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
+      propertyPath: _explosionPrefab
+      value: 
+      objectReference: {fileID: 2136625203}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _explosionRadius
@@ -13077,7 +13313,7 @@ PrefabInstance:
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _secondsToExplode
-      value: 0.3
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3423433810621866417, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
@@ -13159,9 +13395,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
+      propertyPath: _radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
       propertyPath: _activateRadius
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
+      propertyPath: _explosionPrefab
+      value: 
+      objectReference: {fileID: 2136625203}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _explosionRadius
@@ -13252,9 +13498,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
+      propertyPath: _radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
       propertyPath: _activateRadius
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
+      propertyPath: _explosionPrefab
+      value: 
+      objectReference: {fileID: 2136625203}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _explosionRadius
@@ -15358,9 +15614,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
+      propertyPath: _radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
       propertyPath: _activateRadius
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
+      propertyPath: _explosionPrefab
+      value: 
+      objectReference: {fileID: 2136625203}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _explosionRadius
@@ -15407,6 +15673,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2136625202}
   - component: {fileID: 2136625201}
+  - component: {fileID: 2136625203}
   m_Layer: 0
   m_Name: MinesManager
   m_TagString: Untagged
@@ -15449,6 +15716,11 @@ MonoBehaviour:
   - {fileID: 651331659}
   - {fileID: 291391753}
   - {fileID: 243848208}
+  _setupParameters: 1
+  _damage: 10
+  _radius: 2
+  _secondsToExplode: 0.4
+  _explosionPrefab: {fileID: 2136625203}
 --- !u!4 &2136625202
 Transform:
   m_ObjectHideFlags: 0
@@ -15464,6 +15736,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2136625203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136625200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3922df572cc226b4cb9f4a1fc03335e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _particleSystemPrefab: {fileID: 198195352207415246, guid: aa3e75909c005bb49b7a0dc3a050837f,
+    type: 3}
 --- !u!1 &2141023830
 GameObject:
   m_ObjectHideFlags: 0
@@ -15560,7 +15846,7 @@ PrefabInstance:
     - target: {fileID: 2230077827713660737, guid: 7ef5073aa2f88dc49878c5447cb9c1ec,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 45.57
+      value: 43.95
       objectReference: {fileID: 0}
     - target: {fileID: 2230077827713660737, guid: 7ef5073aa2f88dc49878c5447cb9c1ec,
         type: 3}
@@ -15570,7 +15856,7 @@ PrefabInstance:
     - target: {fileID: 2230077827713660737, guid: 7ef5073aa2f88dc49878c5447cb9c1ec,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -19.69
+      value: -20.91
       objectReference: {fileID: 0}
     - target: {fileID: 2230077827713660737, guid: 7ef5073aa2f88dc49878c5447cb9c1ec,
         type: 3}
@@ -15670,6 +15956,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3075416487089850660, guid: f55f45a6debd6224284ac61e7b14974a,
+        type: 3}
+      propertyPath: _diePointPrefab
+      value: 
+      objectReference: {fileID: 1774405189}
     - target: {fileID: 8618466158583620118, guid: f55f45a6debd6224284ac61e7b14974a,
         type: 3}
       propertyPath: m_Name
@@ -15678,7 +15969,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8618466158583620118, guid: f55f45a6debd6224284ac61e7b14974a,
+        type: 3}
+      insertIndex: 6
+      addedObject: {fileID: 1774405194}
   m_SourcePrefab: {fileID: 100100000, guid: f55f45a6debd6224284ac61e7b14974a, type: 3}
 --- !u!4 &4027829756670985062 stripped
 Transform:
@@ -15758,9 +16053,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
+      propertyPath: _radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
       propertyPath: _activateRadius
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
+        type: 3}
+      propertyPath: _explosionPrefab
+      value: 
+      objectReference: {fileID: 2136625203}
     - target: {fileID: 2883176075413423557, guid: ba1137c71e9a3f84a9db072f2715ae11,
         type: 3}
       propertyPath: _explosionRadius
