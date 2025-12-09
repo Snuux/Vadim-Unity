@@ -7,8 +7,6 @@ public class AgentCharacter : MonoBehaviour, IAgentMovable, IAgentRotatable, IEx
     [SerializeField] private float _moveSpeed;
     [SerializeField] private float _maxHealth;
 
-    [SerializeField] private float _requiredTimeToLongIdle;
-
     private AgentMover _mover;
     private TransformRotator _rotator;
     private HealthComponent _healthStat;
@@ -30,7 +28,7 @@ public class AgentCharacter : MonoBehaviour, IAgentMovable, IAgentRotatable, IEx
 
         _rotator = new TransformRotator(transform, _rotationSpeed);
         _healthStat = new HealthComponent(_maxHealth);
-        _mover = new AgentMover(_agent, _moveSpeed, _healthStat, _requiredTimeToLongIdle);
+        _mover = new AgentMover(_agent, _moveSpeed);
 
         _defaultPosition = transform.position;
     }
@@ -67,16 +65,20 @@ public class AgentCharacter : MonoBehaviour, IAgentMovable, IAgentRotatable, IEx
     public void TakeExplosion() { }
 
     public bool IsInjured() => _healthStat.IsInjured();
-    
+
     public bool IsDead() => _healthStat.IsDead();
 
     public void Revive() => _healthStat.Revive();
 
     public void Die() => _agent.ResetPath();
 
-    public bool IsLongIdle() => _mover.IsLongIdle();
-
     public bool IsStaying() => _mover.IsStaying();
 
     public bool HasPath() => _mover.HasPath();
+
+    public void SetMovementSpeed(float speed) => _mover.SetMovementSpeed(speed);
+
+    public float GetMovementSpeed() => _mover.GetMovementSpeed();
+
+    public float GetDefaultMovementSpeed() => _mover.GetDefaultMovementSpeed();
 }

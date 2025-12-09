@@ -2,7 +2,7 @@
 
 public class HealthComponent
 {
-    public const float InjuredMoveSpeedModifier = .3f;
+    public const float InjuredHealthMultiplier = .3f;
 
     private float _currentHealth;
     private float _maxHealth;
@@ -48,19 +48,9 @@ public class HealthComponent
 
         if (IsDead() && healthBeforeDamageApply > 0)
             _isDeadTrigger = true;
-
-        //запоминаем кол-во хп, наносим дамаг, если хп было >0, то умираем.
-        //Если нет, то уже умерли, и не нужно вызывать Die()
-
-        //float healthBeforeDamage = _healthStat.CurrentValue;
-        //
-        //_healthStat.TakeDamage(damage);
-        //
-        //if (IsDead() && healthBeforeDamage > 0)
-        //    Die();
     }
 
-    public bool IsInjured() => CurrentValue < MaxValue * InjuredMoveSpeedModifier;
+    public bool IsInjured() => CurrentValue < MaxValue * InjuredHealthMultiplier;
 
     public bool IsDead() => CurrentValue <= 0;
 
