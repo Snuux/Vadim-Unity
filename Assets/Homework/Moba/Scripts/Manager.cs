@@ -9,53 +9,56 @@ class Manager : MonoBehaviour
 
     [SerializeField] List<MovePointCharacter> _randomPoints;
 
-    [SerializeField] private float _requiredTimeToLongIdle;
-
-    private Controller _playerAgentController;
-    private Controller _playerAgentRandomPointsController;
-    private Controller _playerAgentLongIdleConroller;
+    private Controller _agentCompositeController;
+    private Controller _agentLongIdleCompositeConroller;
+    private Controller _mouseMovableController;
+    private Controller _jumpableController;
 
     private void Awake()
     {
-        _playerAgentController = new CompositeController(
-            new AgentMouseMovableController(_agentCharacter),
-            new AgentRotatableController(_agentCharacter, _agentCharacter),
-            new MoveSpeedByHealthController(_agentCharacter)
-            );
+        _mouseMovableController = new AgentMouseMovableController(_agentCharacter);
 
-        _playerAgentRandomPointsController = new CompositeController(
-            new AgentRandomPointsMovableController(_agentCharacter, _randomPoints),
-            new AgentRotatableController(_agentCharacter, _agentCharacter),
-            new MoveSpeedByHealthController(_agentCharacter)
-            );
+        Controller randomPointsAiController = new AgentRandomPointsMovableController(
+            _agentCharacter, _randomPoints);
 
-        _playerAgentLongIdleConroller = 
-            new LongIdleStateController(_agentCharacter, _requiredTimeToLongIdle, _playerAgentRandomPointsController);
+        Controller rotatableController = new DirectionalRotatableController(
+            _agentCharacter, _agentCharacter);
 
-        _playerAgentController.Enable();
-        _playerAgentRandomPointsController.Disable();
-        _playerAgentLongIdleConroller.Enable();
+        Controller playerRandomPointsController = new CompositeController(
+            randomPointsAiController, rotatableController);
+
+        Controller longIdleStateController = new LongIdleStateController(
+            _agentCharacter, _agentCharacter.RequiredTimeToLongIdle, playerRandomPointsController);
+
+        _jumpableController = new AgentJumpableController(_agentCharacter, _agentCharacter);
+
+        _agentCompositeController =
+            new CompositeController(_mouseMovableController, rotatableController, _jumpableController);
+
+        _agentLongIdleCompositeConroller = new CompositeController(longIdleStateController, _jumpableController);
+
+        _agentCompositeController.Enable();
+        _agentLongIdleCompositeConroller.Disable();
     }
 
     private void Update()
     {
         SwitchControllersIfAgentDeadOrLongIdle();
 
-        _playerAgentController.Update(Time.deltaTime);
-        _playerAgentRandomPointsController.Update(Time.deltaTime);
-        _playerAgentLongIdleConroller.Update(Time.deltaTime);
+        _agentCompositeController.Update(Time.deltaTime);
+        _agentLongIdleCompositeConroller.Update(Time.deltaTime);
     }
 
     private void SwitchControllersIfAgentDeadOrLongIdle()
     {
         if (_agentCharacter.IsDead())
         {
-            _playerAgentController.Disable();
-            _playerAgentRandomPointsController.Disable();
+            _agentCompositeController.Disable();
+            _agentLongIdleCompositeConroller.Disable();
 
             return;
         }
 
-        _playerAgentController.Enable();
+        _agentCompositeController.Enable();
     }
 }

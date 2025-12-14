@@ -1,7 +1,8 @@
+﻿using Unity.AI.Navigation;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class NavMeshUtils : MonoBehaviour
+public static class NavMeshUtils
 {
     public static float GetPathLength(NavMeshPath path)
     {

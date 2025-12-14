@@ -1,9 +1,10 @@
 using MobaLesson;
+using UnityEngine;
 
 public class LongIdleStateController : Controller
 {
     private AgentCharacter _agentCharacter;
-    Controller _randomPointsController;
+    private Controller _aiController;
 
     private float _requiredTimeToLongIdle;
     private float _currentTimeToLongIdle;
@@ -12,17 +13,33 @@ public class LongIdleStateController : Controller
     {
         _agentCharacter = agent;
         _requiredTimeToLongIdle = requiredTimeToLongIdle;
-        _randomPointsController = randomPointsController;
+        _aiController = randomPointsController;
+
+        _aiController.Enable();
     }
 
-    public override void UpdateControlling(float deltaTime)
+    public override void Enable()
+    {
+        base.Enable();
+        _aiController.Enable();
+    }
+
+    public override void Disable()
+    {
+        base.Disable();
+        _aiController.Disable();
+    }
+
+    public override void UpdateLogic(float deltaTime)
     {
         UpdateIsLongIdle(deltaTime);
 
         if (IsLongIdle() && _agentCharacter.HasPath() == false)
-            _randomPointsController.Enable();
+            _aiController.Enable();
         else
-            _randomPointsController.Disable();
+            _aiController.Disable();
+
+        _aiController.Update(Time.deltaTime);
     }
 
     private void UpdateIsLongIdle(float deltaTime)

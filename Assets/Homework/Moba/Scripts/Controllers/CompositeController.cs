@@ -1,6 +1,6 @@
 class CompositeController : Controller
 {
-    Controller[] _controllers;
+    private Controller[] _controllers;
 
     public CompositeController(params Controller[] controllers)
     {
@@ -23,9 +23,9 @@ class CompositeController : Controller
             controller.Disable();
     }
 
-    public override void UpdateControlling(float deltaTime)
+    public override void UpdateLogic(float deltaTime)
     {
         foreach (var controller in _controllers)
-            controller.UpdateControlling(deltaTime);
+            controller.UpdateLogic(deltaTime);
     }
 }

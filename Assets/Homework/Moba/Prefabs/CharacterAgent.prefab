@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 6839967640491599604}
   - component: {fileID: 4188340014078857879}
   - component: {fileID: 3075416487089850660}
+  - component: {fileID: 2232273552398534679}
   - component: {fileID: 2443852538188329817}
   - component: {fileID: 6415103642102430882}
   m_Layer: 0
@@ -86,7 +87,7 @@ NavMeshAgent:
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
+  m_AutoTraverseOffMeshLink: 0
   m_AutoBraking: 1
   m_AutoRepath: 0
   m_Height: 2
@@ -157,10 +158,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rotationSpeed: 900
   _moveSpeed: 10
+  _jumpSpeed: 10
   _maxHealth: 100
-  _requiredTimeToLongIdle: 0.5
-  _anchorPointPrefab: {fileID: 2443852538188329817}
-  _diePointPrefab: {fileID: 6415103642102430882}
+  _requiredTimeToLongIdle: 1
+  _jumpCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 49.75844
+      outSlope: 49.75844
+      tangentMode: 0
+      weightedMode: 3
+      inWeight: 0.33333334
+      outWeight: 0.076634325
+    - serializedVersion: 3
+      time: 0.4805556
+      value: 4.9467435
+      inSlope: 0.0067570377
+      outSlope: 0.0067570377
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 1
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -108.81967
+      outSlope: -108.81967
+      tangentMode: 0
+      weightedMode: 3
+      inWeight: 0.029439125
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _injuredHealthMultiplier: 0.3
+  _injuredSpeedMultiplier: 0.3
 --- !u!114 &3075416487089850660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +210,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 7285813506517023883}
   _character: {fileID: 4188340014078857879}
+  _diePointPrefab: {fileID: 6415103642102430882}
+--- !u!114 &2232273552398534679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8618466158583620118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b64a8113d37c16d4a8446192a72ee0f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _character: {fileID: 4188340014078857879}
+  _anchorPointPrefab: {fileID: 2443852538188329817}
+  _manager: {fileID: 0}
 --- !u!114 &2443852538188329817
 MonoBehaviour:
   m_ObjectHideFlags: 0

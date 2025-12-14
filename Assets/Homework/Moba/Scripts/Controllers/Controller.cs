@@ -2,6 +2,8 @@ public abstract class Controller
 {
     private bool _isEnabled;
 
+    public bool IsEnabled => _isEnabled;
+
     public virtual void Enable() => _isEnabled = true;
 
     public virtual void Disable() => _isEnabled = false;
@@ -11,8 +13,8 @@ public abstract class Controller
         if (_isEnabled == false)
             return;
 
-        UpdateControlling(deltaTime);
+        UpdateLogic(deltaTime);
     }
 
-    public abstract void UpdateControlling(float deltaTime);
+    public abstract void UpdateLogic(float deltaTime);
 }

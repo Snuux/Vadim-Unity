@@ -19,7 +19,7 @@ public class AgentRandomPointsMovableController : Controller
         _pathToTarget = new NavMeshPath();
     }
 
-    public override void UpdateControlling(float deltaTime)
+    public override void UpdateLogic(float deltaTime)
     {
         MovePointCharacter pointCharacter = GetRandomPoint();
 

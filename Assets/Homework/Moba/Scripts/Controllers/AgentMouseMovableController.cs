@@ -4,39 +4,33 @@ using UnityEngine.EventSystems;
 
 public class AgentMouseMovableController : Controller
 {
+    private const float PeriodBetweenMouseButtonClicks = .1f;
     private const float DefaultRayDistance = 1000f;
     private const float Treshhold = 0.1f;
-    private const float PeriodBetweenMouseButtonClicks = .4f;
 
-    private IAgentMovable _agent;
+    private IAgentMovable _agentMovable;
     private Vector3 _destinationPosition;
-    private float _timeBetweenMouseButtonClicks;
 
     private NavMeshPath _pathToTarget;
     private bool _isValidPath;
 
-    public AgentMouseMovableController(IAgentMovable agent)
+    private MouseContinousClicksChecker _continousClicks;
+
+    public AgentMouseMovableController(IAgentMovable agentMovable)
     {
-        _agent = agent;
+        _agentMovable = agentMovable;
+
         _pathToTarget = new NavMeshPath();
+        _continousClicks = new MouseContinousClicksChecker();
     }
 
-    public override void UpdateControlling(float deltaTime)
+    public override void UpdateLogic(float deltaTime)
     {
-        _timeBetweenMouseButtonClicks += Time.deltaTime;
-
         if (EventSystem.current.IsPointerOverGameObject())
             return;
 
-        if (Input.GetMouseButton(0) && _timeBetweenMouseButtonClicks >= PeriodBetweenMouseButtonClicks)
-        {
+        if (_continousClicks.IsMouseButtonPressEverySecond(PeriodBetweenMouseButtonClicks))
             ProcessDestinationPosition();
-            _timeBetweenMouseButtonClicks = 0;
-        }
-        else if (Input.GetMouseButtonDown(0)) //когда мы быстро тыкаем по мышке, вместа зажатия
-        {
-            ProcessDestinationPosition();
-        }
     }
 
     private void ProcessDestinationPosition()
@@ -45,13 +39,12 @@ public class AgentMouseMovableController : Controller
         Vector3 mouseWorldPos = MouseWorldPosition();
 
         _destinationPosition = GetHitPoint(ray);
-
-        _isValidPath = _agent.TryGetPath(_destinationPosition, _pathToTarget);
+        _isValidPath = _agentMovable.TryGetPath(_destinationPosition, _pathToTarget);
 
         if (_isValidPath)
         {
             if (_destinationPosition.magnitude > Treshhold)
-                _agent.SetDestination(_destinationPosition);
+                _agentMovable.SetDestination(_destinationPosition);
         }
     }
 

@@ -1,13 +1,21 @@
 ﻿using UnityEngine;
+using UnityEngine.UIElements;
 
 public class HealthComponent
 {
-    public const float InjuredHealthMultiplier = .3f;
-
+    private float _injuredHealthMultiplier;
     private float _currentHealth;
     private float _maxHealth;
 
     private bool _isDeadTrigger;
+
+    public HealthComponent(float maxHealth, float injuredHealthMultiplier)
+    {
+        _maxHealth = maxHealth;
+        _injuredHealthMultiplier = injuredHealthMultiplier;
+
+        CurrentValue = maxHealth;
+    }
 
     public bool IsDeadTrigger => _isDeadTrigger;
 
@@ -19,11 +27,6 @@ public class HealthComponent
 
     public float MaxValue => _maxHealth;
 
-    public HealthComponent(float maxHealth)
-    {
-        _maxHealth = maxHealth;
-        CurrentValue = maxHealth;
-    }
 
     public void Update(float deltaTime)
     {
@@ -36,11 +39,11 @@ public class HealthComponent
 
     public void TakeDamage(float damage)
     {
-        if (damage < 0)
-        {
-            Debug.Log("Damage is negative!");
-            return;
-        }
+        //if (damage < 0)
+        //{
+        //    Debug.Log("Damage is negative!");
+        //    return;
+        //}
 
         float healthBeforeDamageApply = CurrentValue;
 
@@ -50,7 +53,7 @@ public class HealthComponent
             _isDeadTrigger = true;
     }
 
-    public bool IsInjured() => CurrentValue < MaxValue * InjuredHealthMultiplier;
+    public bool IsInjured() => CurrentValue < MaxValue * _injuredHealthMultiplier;
 
     public bool IsDead() => CurrentValue <= 0;
 

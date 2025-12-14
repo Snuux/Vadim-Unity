@@ -8,4 +8,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Lessons/DotProduct/DotProduct.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Homework/Moba/Moba.unity
+    guid: 1be781a255d5e1f47ab5a0e675654b02
+  - enabled: 1
+    path: Assets/Homework/Boxes/Boxes.unity
+    guid: 66e517a288164914f8d23f8a846fa485
+  - enabled: 1
+    path: Assets/Lessons/CharacterControllers/CharacterController.unity
+    guid: e4a2ac854049ede498f7cc4c32cf12c9
+  - enabled: 1
+    path: Assets/Homework/Ship/Ship.unity
+    guid: aa062e77dc845434a926d03b320daace
   m_configObjects: {}

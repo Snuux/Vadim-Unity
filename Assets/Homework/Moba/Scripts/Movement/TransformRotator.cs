@@ -6,10 +6,9 @@ public class TransformRotator
     private float _rotationSpeed;
     private Vector3 _currentDirection;
 
-    public TransformRotator(Transform transform, float rotationSpeed)
+    public TransformRotator(Transform transform)
     {
         _transform = transform;
-        _rotationSpeed = rotationSpeed;
     }
 
     public Quaternion CurrentRotation => _transform.rotation;
@@ -20,11 +19,14 @@ public class TransformRotator
             return;
 
         Quaternion currentRotation = Quaternion.LookRotation(_currentDirection.normalized);
-
         float step = _rotationSpeed * deltaTime;
 
         _transform.rotation = Quaternion.RotateTowards(_transform.rotation, currentRotation, step);
     }
 
-    public void SetRotation(Vector3 direction) => _currentDirection = direction;
+    public void SetRotation(Vector3 direction, float speed)
+    {
+        _currentDirection = direction;
+        _rotationSpeed = speed;
+    }
 }
